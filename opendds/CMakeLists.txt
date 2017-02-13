@@ -43,7 +43,7 @@ include_directories(
 	${CMAKE_SOURCE_DIR}/firmatacpp/vendor/serial/include
 )
 
-#DDS Source
+#DDS Gen Codes Source
 add_library(dds_source
 	${PROJECT_SOURCE_DIR}/gen/TemplateC.cpp
 	${PROJECT_SOURCE_DIR}/gen/TemplateS.cpp
