@@ -15,5 +15,3 @@ tao_idl -I$DDS_ROOT -I$TAO_ROOT/orbsvcs -o ../gen ../gen/*.idl
 tao_idl -I$DDS_ROOT -I$TAO_ROOT/orbsvcs -o ../gen *.idl
 echo "Code Generated"
 cd ..
-
-cp ./run_test.pl ../build/opendds
