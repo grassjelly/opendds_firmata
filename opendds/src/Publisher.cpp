@@ -37,14 +37,17 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
 
     f->reportDigital(0, 1);
     // Initialize DomainParticipantFactory, handling command line args
+    DDS::DomainId_t domain_id = 42;
+    const char* topic_name{"test2"};
+
     DDS::DomainParticipantFactory_var dpf =
       TheParticipantFactoryWithArgs(argc, argv);
 
     // Create domain participant
-    DDS::DomainParticipant_var participant = createParticipant(dpf);
+    DDS::DomainParticipant_var participant = createParticipant(dpf, domain_id);
 
     // Register type support and create topic
-    DDS::Topic_var topic = createTopic(participant);
+    DDS::Topic_var topic = createTopic(participant, topic_name);
 
     // Create publisher
     DDS::Publisher_var publisher = createPublisher(participant);
